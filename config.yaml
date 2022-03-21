@@ -1,0 +1,21 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_vimrc:
+    src: vimrc
+    dst: ~/.vimrc
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+    chmod: '644'
+  f_init.vim:
+    src: config/nvim/init.vim
+    dst: ~/.config/nvim/init.vim
+profiles:
+  ubuntu-focal:
+    dotfiles:
+    - f_vimrc
+    - f_zshrc
+    - f_init.vim
